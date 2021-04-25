@@ -1,0 +1,72 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Color Coded_ScaleFactor":"1.25",
+   "Color Coded_TopLeft":"-52,-70",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-694,-228",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/dvi2rgb_0_PixelClk:false|/clk_wiz_0_clk_out1:false|",
+   "Interfaces View_ScaleFactor":"1.25",
+   "Interfaces View_TopLeft":"-220,-144",
+   "No Loops_ScaleFactor":"1.25",
+   "No Loops_TopLeft":"-72,-44",
+   "Reduced Jogs_Layers":"/dvi2rgb_0_PixelClk:true|/clk_wiz_0_clk_out1:true|",
+   "Reduced Jogs_ScaleFactor":"1.25",
+   "Reduced Jogs_TopLeft":"-72,-44",
+   "commentid":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port sys_clk -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port hdmi_rx_clk_n -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port hdmi_rx_clk_p -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port hdmi_tx_clk_p -pg 1 -lvl 4 -x 990 -y 90 -defaultsOSRD
+preplace port hdmi_tx_clk_n -pg 1 -lvl 4 -x 990 -y 120 -defaultsOSRD
+preplace port led0 -pg 1 -lvl 4 -x 990 -y 240 -defaultsOSRD
+preplace port hdmi_rx_scl -pg 1 -lvl 4 -x 990 -y 440 -defaultsOSRD
+preplace port hdmi_rx_sda -pg 1 -lvl 4 -x 990 -y 590 -defaultsOSRD
+preplace portBus hdmi_rx_hpd -pg 1 -lvl 4 -x 990 -y 300 -defaultsOSRD
+preplace portBus hdmi_tx_hpdn -pg 1 -lvl 4 -x 990 -y 330 -defaultsOSRD
+preplace portBus hdmi_rx_d_n -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace portBus hdmi_tx_d_n -pg 1 -lvl 4 -x 990 -y 180 -defaultsOSRD
+preplace portBus hdmi_rx_d_p -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace portBus hdmi_tx_d_p -pg 1 -lvl 4 -x 990 -y 150 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 2 -x 410 -y 420 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 3 -x 800 -y 120 -defaultsOSRD
+preplace inst GND -pg 1 -lvl 1 -x 120 -y 150 -defaultsOSRD
+preplace inst clk_wiz_200mhz -pg 1 -lvl 1 -x 120 -y 300 -swap {0 1 3 2} -defaultsOSRD
+preplace inst VCC -pg 1 -lvl 3 -x 800 -y 300 -defaultsOSRD
+preplace inst IOSDA -pg 1 -lvl 3 -x 800 -y 580 -defaultsOSRD
+preplace inst IOSCL -pg 1 -lvl 3 -x 800 -y 430 -defaultsOSRD
+preplace netloc dvi2rgb_0_PixelClk 1 2 1 620 180n
+preplace netloc xlconstant_0_dout 1 1 2 230 160 NJ
+preplace netloc dvi2rgb_0_vid_pData 1 2 1 580 80n
+preplace netloc dvi2rgb_0_vid_pHSync 1 2 1 590 100n
+preplace netloc dvi2rgb_0_vid_pVSync 1 2 2 600 240 NJ
+preplace netloc dvi2rgb_0_vid_pVDE 1 2 1 610 140n
+preplace netloc clk_wiz_0_clk_out1 1 1 1 220 310n
+preplace netloc xlconstant_1_dout 1 0 4 20 620 NJ 620 630J 510 970
+preplace netloc sys_clk_1 1 0 1 NJ 310
+preplace netloc hdmi_rx_clk_n_1 1 0 2 NJ 210 240J
+preplace netloc hdmi_rx_clk_p_1 1 0 2 NJ 370 NJ
+preplace netloc rgb2dvi_0_TMDS_Clk_p 1 3 1 970J 90n
+preplace netloc rgb2dvi_0_TMDS_Clk_n 1 3 1 NJ 120
+preplace netloc hdmi_rx_d_n_1 1 0 2 NJ 430 NJ
+preplace netloc rgb2dvi_0_TMDS_Data_n 1 3 1 970J 160n
+preplace netloc hdmi_rx_d_p_1 1 0 2 NJ 400 210J
+preplace netloc rgb2dvi_0_TMDS_Data_p 1 3 1 970J 140n
+preplace netloc Net 1 3 1 NJ 440
+preplace netloc Net1 1 3 1 NJ 590
+preplace netloc dvi2rgb_0_SCL_T 1 2 1 N 440
+preplace netloc dvi2rgb_0_SDA_T 1 2 1 570 500n
+preplace netloc IOSDA_io_in 1 2 2 600J 500 960
+preplace netloc IOSCL_io_in 1 2 2 630J 360 960
+preplace netloc dvi2rgb_0_SDA_O 1 2 1 580 480n
+preplace netloc dvi2rgb_0_SCL_O 1 2 1 N 420
+preplace netloc dvi2rgb_0_RGB 1 2 1 570 60n
+levelinfo -pg 1 0 120 410 800 990
+pagesize -pg 1 -db -bbox -sgen -160 0 1160 650
+"
+}
+0

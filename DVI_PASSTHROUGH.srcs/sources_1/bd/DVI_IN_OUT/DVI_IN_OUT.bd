@@ -1,0 +1,425 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9B65D0C35D108028",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../DVI_PASSTHROUGH.gen/sources_1/bd/DVI_IN_OUT",
+      "name": "DVI_IN_OUT",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "dvi2rgb_0": "",
+      "rgb2dvi_0": "",
+      "GND": "",
+      "clk_wiz_200mhz": "",
+      "VCC": "",
+      "IOSDA": "",
+      "IOSCL": ""
+    },
+    "ports": {
+      "hdmi_rx_hpd": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "sys_clk": {
+        "direction": "I"
+      },
+      "hdmi_rx_clk_n": {
+        "direction": "I"
+      },
+      "hdmi_rx_clk_p": {
+        "direction": "I"
+      },
+      "hdmi_tx_hpdn": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "hdmi_tx_clk_p": {
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "hdmi_tx_clk_n": {
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "hdmi_rx_d_n": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
+      },
+      "hdmi_tx_d_n": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "hdmi_rx_d_p": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
+      },
+      "hdmi_tx_d_p": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "led0": {
+        "direction": "O"
+      },
+      "hdmi_rx_scl": {
+        "direction": "IO"
+      },
+      "hdmi_rx_sda": {
+        "direction": "IO"
+      }
+    },
+    "components": {
+      "dvi2rgb_0": {
+        "vlnv": "digilentinc.com:ip:dvi2rgb:2.0",
+        "xci_name": "DVI_IN_OUT_dvi2rgb_0_0",
+        "xci_path": "ip\\DVI_IN_OUT_dvi2rgb_0_0\\DVI_IN_OUT_dvi2rgb_0_0.xci",
+        "inst_hier_path": "dvi2rgb_0",
+        "parameters": {
+          "kClkRange": {
+            "value": "3"
+          },
+          "kEnableSerialClkOutput": {
+            "value": "false"
+          }
+        }
+      },
+      "rgb2dvi_0": {
+        "vlnv": "digilentinc.com:ip:rgb2dvi:1.4",
+        "xci_name": "DVI_IN_OUT_rgb2dvi_0_0",
+        "xci_path": "ip\\DVI_IN_OUT_rgb2dvi_0_0\\DVI_IN_OUT_rgb2dvi_0_0.xci",
+        "inst_hier_path": "rgb2dvi_0",
+        "parameters": {
+          "kClkPrimitive": {
+            "value": "PLL"
+          },
+          "kClkRange": {
+            "value": "3"
+          },
+          "kGenerateSerialClk": {
+            "value": "true"
+          }
+        }
+      },
+      "GND": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "DVI_IN_OUT_xlconstant_0_0",
+        "xci_path": "ip\\DVI_IN_OUT_xlconstant_0_0\\DVI_IN_OUT_xlconstant_0_0.xci",
+        "inst_hier_path": "GND",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "clk_wiz_200mhz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "DVI_IN_OUT_clk_wiz_0_0",
+        "xci_path": "ip\\DVI_IN_OUT_clk_wiz_0_0\\DVI_IN_OUT_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_200mhz",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKIN2_JITTER_PS": {
+            "value": "133.33"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "109.241"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "200.000"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "ENABLE_CLOCK_MONITOR": {
+            "value": "false"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "5.000"
+          },
+          "PRIMITIVE": {
+            "value": "MMCM"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_INCLK_SWITCHOVER": {
+            "value": "false"
+          }
+        }
+      },
+      "VCC": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "DVI_IN_OUT_xlconstant_1_0",
+        "xci_path": "ip\\DVI_IN_OUT_xlconstant_1_0\\DVI_IN_OUT_xlconstant_1_0.xci",
+        "inst_hier_path": "VCC"
+      },
+      "IOSDA": {
+        "vlnv": "xilinx.com:module_ref:IOBUF:1.0",
+        "xci_name": "DVI_IN_OUT_IOBUF_1_0",
+        "xci_path": "ip\\DVI_IN_OUT_IOBUF_1_0\\DVI_IN_OUT_IOBUF_1_0.xci",
+        "inst_hier_path": "IOSDA",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IOBUF",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "io_out": {
+            "direction": "I"
+          },
+          "io_tri": {
+            "direction": "I"
+          },
+          "io_in": {
+            "direction": "O"
+          },
+          "io_pad": {
+            "direction": "IO"
+          }
+        }
+      },
+      "IOSCL": {
+        "vlnv": "xilinx.com:module_ref:IOBUF:1.0",
+        "xci_name": "DVI_IN_OUT_IOSDA_0",
+        "xci_path": "ip\\DVI_IN_OUT_IOSDA_0\\DVI_IN_OUT_IOSDA_0.xci",
+        "inst_hier_path": "IOSCL",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IOBUF",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "io_out": {
+            "direction": "I"
+          },
+          "io_tri": {
+            "direction": "I"
+          },
+          "io_in": {
+            "direction": "O"
+          },
+          "io_pad": {
+            "direction": "IO"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "dvi2rgb_0_RGB": {
+        "interface_ports": [
+          "dvi2rgb_0/RGB",
+          "rgb2dvi_0/RGB"
+        ]
+      }
+    },
+    "nets": {
+      "dvi2rgb_0_PixelClk": {
+        "ports": [
+          "dvi2rgb_0/PixelClk",
+          "rgb2dvi_0/PixelClk"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "GND/dout",
+          "dvi2rgb_0/aRst",
+          "dvi2rgb_0/pRst",
+          "rgb2dvi_0/aRst"
+        ]
+      },
+      "dvi2rgb_0_vid_pData": {
+        "ports": [
+          "dvi2rgb_0/vid_pData",
+          "rgb2dvi_0/vid_pData"
+        ]
+      },
+      "dvi2rgb_0_vid_pHSync": {
+        "ports": [
+          "dvi2rgb_0/vid_pHSync",
+          "rgb2dvi_0/vid_pHSync"
+        ]
+      },
+      "dvi2rgb_0_vid_pVSync": {
+        "ports": [
+          "dvi2rgb_0/vid_pVSync",
+          "rgb2dvi_0/vid_pVSync",
+          "led0"
+        ]
+      },
+      "dvi2rgb_0_vid_pVDE": {
+        "ports": [
+          "dvi2rgb_0/vid_pVDE",
+          "rgb2dvi_0/vid_pVDE"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_200mhz/clk_out1",
+          "dvi2rgb_0/RefClk"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "VCC/dout",
+          "clk_wiz_200mhz/reset",
+          "hdmi_rx_hpd",
+          "hdmi_tx_hpdn"
+        ]
+      },
+      "sys_clk_1": {
+        "ports": [
+          "sys_clk",
+          "clk_wiz_200mhz/clk_in1"
+        ]
+      },
+      "hdmi_rx_clk_n_1": {
+        "ports": [
+          "hdmi_rx_clk_n",
+          "dvi2rgb_0/TMDS_Clk_n"
+        ]
+      },
+      "hdmi_rx_clk_p_1": {
+        "ports": [
+          "hdmi_rx_clk_p",
+          "dvi2rgb_0/TMDS_Clk_p"
+        ]
+      },
+      "rgb2dvi_0_TMDS_Clk_p": {
+        "ports": [
+          "rgb2dvi_0/TMDS_Clk_p",
+          "hdmi_tx_clk_p"
+        ]
+      },
+      "rgb2dvi_0_TMDS_Clk_n": {
+        "ports": [
+          "rgb2dvi_0/TMDS_Clk_n",
+          "hdmi_tx_clk_n"
+        ]
+      },
+      "hdmi_rx_d_n_1": {
+        "ports": [
+          "hdmi_rx_d_n",
+          "dvi2rgb_0/TMDS_Data_n"
+        ]
+      },
+      "rgb2dvi_0_TMDS_Data_n": {
+        "ports": [
+          "rgb2dvi_0/TMDS_Data_n",
+          "hdmi_tx_d_n"
+        ]
+      },
+      "hdmi_rx_d_p_1": {
+        "ports": [
+          "hdmi_rx_d_p",
+          "dvi2rgb_0/TMDS_Data_p"
+        ]
+      },
+      "rgb2dvi_0_TMDS_Data_p": {
+        "ports": [
+          "rgb2dvi_0/TMDS_Data_p",
+          "hdmi_tx_d_p"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "hdmi_rx_scl",
+          "IOSCL/io_pad"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "hdmi_rx_sda",
+          "IOSDA/io_pad"
+        ]
+      },
+      "dvi2rgb_0_SCL_T": {
+        "ports": [
+          "dvi2rgb_0/SCL_T",
+          "IOSCL/io_tri"
+        ]
+      },
+      "dvi2rgb_0_SDA_T": {
+        "ports": [
+          "dvi2rgb_0/SDA_T",
+          "IOSDA/io_tri"
+        ]
+      },
+      "IOSDA_io_in": {
+        "ports": [
+          "IOSDA/io_in",
+          "dvi2rgb_0/SDA_I"
+        ]
+      },
+      "IOSCL_io_in": {
+        "ports": [
+          "IOSCL/io_in",
+          "dvi2rgb_0/SCL_I"
+        ]
+      },
+      "dvi2rgb_0_SDA_O": {
+        "ports": [
+          "dvi2rgb_0/SDA_O",
+          "IOSDA/io_out"
+        ]
+      },
+      "dvi2rgb_0_SCL_O": {
+        "ports": [
+          "dvi2rgb_0/SCL_O",
+          "IOSCL/io_out"
+        ]
+      }
+    }
+  }
+}
